@@ -1,5 +1,6 @@
-var util = require('util'),
-  twitter = require('twitter');
+var util = require('util');
+var twitter = require('twitter');
+
 var twit = new twitter({
   consumer_key: 'r1meHgmotX0kqqsC7MAd0stV4',
   consumer_secret: 'gYTPIf8toYvbKexvha6oIajqr5BsshEjTKF5bXUM2h9VCu8CoL',
@@ -12,36 +13,48 @@ var twit = new twitter({
 // });
 
 twit.rateLimitStatus(function(data) {
-  console.log(data['resources']['statuses']['/statuses/home_timeline']);
+    resources = data['resources']['statuses']['/statuses/home_timeline'];
+    console.log(resources);
 })
 
 var params = {
-  'include_entities' : true
+  'count' : 30,
+  'include_entities' : true,
+  'exclude_replies'  : false
 };
 
 twit.getHomeTimeline(params, function(data) {
   for (var i in data) {
     var tweet = data[i];
     var text = tweet['text'];
-    var user = tweet['user']['name'];
-    var urlEntities = tweet['entities']['urls'];
+    var user = tweet['user']['screen_name'];
+    var urls = tweet['entities']['urls'];
+    var media = tweet['entities']['media'];
 
     var links = [];
-    var media = [];
 
-    if (urlEntities[0]) {
-      for (var entity in urlEntities) {
-        var temp = urlEntities[entity]['display_url'];
+    if (urls[0]) {
+      for (var url in urls) {
+        var temp = urls[url]['expanded_url'];
         links.push(temp);
       }
     };
 
-    console.log(
-      user,
-      text,
-      links,
-      '\n'
-      );
-    
+    if (media) {
+      for (var url in urls) {
+        var temp = urls[url]['expanded_url'];
+        links.push(temp);
+      }
+    };
+
+    // console.log('text', text);
+
+    if (links[0]) {
+      // console.log('links', links);
+      for (link in links) {
+        console.log('@' + user, ':', links[link]);
+      }
+    }
+
   }
 });
