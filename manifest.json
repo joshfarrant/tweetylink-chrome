@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "TweetyLink",
+  "description": "This extension displays the most recently tweeted links from a Twitter user's home timeline.",
+  "version": "0.1",
+
+  "permissions": [
+    "*://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "assets/icon.png",
+    "default_popup": "popup.html"
+  }
+}

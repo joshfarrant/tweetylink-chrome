@@ -1,0 +1,44 @@
+html {
+  overflow: auto;
+  background-color: aqua;
+}
+
+body {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.navbar {
+}
+
+.navbar i {
+  float: right;
+  margin: 15px;
+  font-size: 18px;
+  color: white;
+}
+
+#main-view {
+  height: 520px;
+}
+
+#view-sign-in {
+  padding: 0px 15px;
+}
+
+#view-tweets {
+
+}
+
+#view-tweets .profile-img {
+  background-image: url(https://pbs.twimg.com/profile_images/473409362749186049/jhIuykVo.png);
+  background-size: 56px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  margin-right: 16px;
+}

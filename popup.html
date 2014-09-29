@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="style.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="bootstrap/css/material.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="bootstrap/icons/icons-material-design.css" rel="stylesheet" media="screen" type="text/css">
+
+
+    <script src="oauth/oauth.js"></script>
+  </head>
+  <body tabindex="1">
+
+    <div class="navbar navbar-default">
+      <div class="navbar-header">
+        <span class="navbar-brand">TweetyLink</span>
+        <i class="icon icon-material-settings icon-material-white"></i>
+      </div>
+     
+    </div>
+
+    <div id="main-view">
+
+      <div id="view-sign-in">
+        <h1>Hi</h1>
+        <p class="lead">Thanks for downloading TweetyLink!
+        <br><br>
+        To get started, just click the button below...</p>
+        <button type="button" class="btn btn-primary btn-lg" id="btn-sign-in">SIGN IN WITH TWITTER</button>
+      </div>
+
+      <div id="view-tweets">
+        <div class="list-group">
+
+          <div class="list-group-item">
+            <div class="row-action-primary profile-img" id="profile-img-1"></div>
+            <div class="row-content">
+              <div class="least-content">8m</div>
+              <h4 class="list-group-item-heading">@FarPixel</h4>
+              <p class="list-group-item-text">Check out this awesome website! <a href="http://josh.farrant.me">http://josh.farrant.me</a></p>
+            </div>
+          </div>
+
+          <div class="list-group-separator"></div>
+
+          <div class="list-group-item">
+            <div class="row-action-primary profile-img" id="profile-img-2"></div>
+            <div class="row-content">
+              <div class="least-content">10m</div>
+              <h4 class="list-group-item-heading"><a href="http://josh.farrant.me">http://josh.farrant.me</a></h4>
+              <p class="list-group-item-text">@FarPixel</p>
+            </div>
+          </div>
+
+          <div class="list-group-separator"></div>
+
+          <div class="list-group-item">
+            <div class="row-action-primary profile-img" id="profile-img-3"></div>
+            <div class="row-content">
+              <div class="least-content">15m</div>
+              <h4 class="list-group-item-heading">@FarPixel</h4>
+              <p class="list-group-item-text"><a href="http://josh.farrant.me">http://josh.farrant.me</a></p>
+            </div>
+          </div>
+          <div class="list-group-separator"></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+  <script src="jquery/jquery-2.1.1.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/ripples.js"></script>  
+  <script src="bootstrap/js/material.js"></script>
+  <script src="main.js"></script>
+
+
+</html>
