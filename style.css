@@ -1,34 +1,88 @@
 html {
   overflow: auto;
-  background-color: aqua;
 }
 
 body {
-  width: 400px;
+  width: 384px;
   height: 600px;
   overflow: hidden;
 }
 
-.navbar {
+.nav-bar {
+  height: 72px;
+  width: 100%;
+  background-color: #03a9f4;
 }
 
-.navbar i {
-  float: right;
-  margin: 15px;
-  font-size: 18px;
+.nav-bar .top-bar {
+  height: 24px;
+  width: 100%;
+  background-color: #0288d1;
+}
+
+.nav-bar-info {
   color: white;
+  height: 48px;
+  font-size: 20px;
+  padding-top: 9px;
+  padding-left: 14px;
+}
+
+.nav-bar-info i {
+  float: right;
+  color: white;
+  padding-top: 3px;
+  padding-right: 14px;
 }
 
 #main-view {
-  height: 520px;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 528px;
 }
 
-#view-sign-in {
-  padding: 0px 15px;
+#view-sign-in div {
+  width: 100%;
+  display: inline-block;
+  padding: 0px 14px;  
+}
+
+#sign-in-greeting {
+  height: 144px;
+}
+
+#sign-in-greeting h1 {
+  font-size: 3em;
+}
+
+#sign-in-instructions {
+  height: 168px;
+}
+
+#sign-in-instructions p {
+  height: 168px;
+  font-size: 1.3em;
+}
+
+#sign-in-button {
+}
+
+#btn-sign-in {
+  background-color: #ff4081;
+  margin: 0;
 }
 
 #view-tweets {
+  margin-top: 16px
+}
 
+#view-tweets .list-group-item {
+  padding: 0px 14px;
+}
+
+#view-tweets .least-content {
+  right: 14px;
 }
 
 #view-tweets .profile-img {
@@ -40,5 +94,18 @@ body {
   -moz-border-radius: 50%;
   width: 56px;
   height: 56px;
-  margin-right: 16px;
+  padding-right: 14px;
+  margin-right: 14px;
+}
+
+#view-tweets #profile-img-2 {
+  background-image: url(https://pbs.twimg.com/profile_images/378800000706584190/b76a23b8ce1d2c2ee1760ec20e20c02f.jpeg);
+}
+
+#view-tweets #profile-img-3 {
+  background-image: url(https://pbs.twimg.com/profile_images/479391156329922560/SxehSXAf.jpeg);
+}
+
+#view-tweets #profile-img-4 {
+  background-image: url(https://pbs.twimg.com/profile_images/415634117510696960/Ol8-0bRw.jpeg);
 }
